@@ -1,0 +1,207 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+button,
+select,
+input {
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+.game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.puzzle-container {
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+.puzzle-grid {
+    display: grid;
+    gap: 2px;
+    background-color: #34495e;
+}
+
+.puzzle-tile {
+    background-size: cover;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.puzzle-tile:hover {
+    transform: scale(0.98);
+    box-shadow: 0 0 0 2px #3498db;
+}
+
+.puzzle-tile.selected {
+    box-shadow: 0 0 0 3px #e74c3c;
+    z-index: 10;
+}
+
+.original-image {
+    max-width: 300px;
+    max-height: 300px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.game-stats {
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.tile-number {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.success-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(46, 204, 113, 0.9);
+    color: white;
+    padding: 20px 40px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    display: none;
+}
+
+.toggle-reference {
+    margin-top: 10px;
+    background-color: #27ae60;
+}
+
+.toggle-reference:hover {
+    background-color: #2ecc71;
+}
+
+#originalImageContainer {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#originalImageContainer.visible {
+    display: block;
+}
+
+.file-input-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.file-input-wrapper input[type=file] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.file-input-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.file-name {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #7f8c8d;
+}

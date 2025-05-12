@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Puzzle Game Generator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>Custom Puzzle Game Generator</h1>
+
+    <div class="container">
+        <div class="controls">
+            <div class="control-group">
+                <label for="imageUpload">Upload Image:</label>
+                <div class="file-input-wrapper">
+                    <span class="file-input-button">Choose File</span>
+                    <input type="file" id="imageUpload" accept="image/*">
+                </div>
+                <span class="file-name" id="fileName">No file chosen</span>
+            </div>
+
+            <div class="control-group">
+                <label for="difficultyLevel">Difficulty:</label>
+                <select id="difficultyLevel">
+                    <option value="3">Easy (3x3)</option>
+                    <option value="4" selected>Medium (4x4)</option>
+                    <option value="5">Hard (5x5)</option>
+                    <option value="6">Expert (6x6)</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="showNumbers">Game Options:</label>
+                <div>
+                    <input type="checkbox" id="showNumbers" checked>
+                    <label for="showNumbers">Show Tile Numbers</label>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <button id="generatePuzzle" disabled>Generate Puzzle</button>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="game-stats">
+                <div id="moveCounter">Moves: 0</div>
+                <div id="timer">Time: 00:00</div>
+                <button id="resetPuzzle" disabled>Reset Puzzle</button>
+            </div>
+
+            <div class="puzzle-container" id="puzzleContainer">
+                <div class="puzzle-grid" id="puzzleGrid"></div>
+                <div class="success-message" id="successMessage">Puzzle Solved! 🎉</div>
+            </div>
+
+            <button class="toggle-reference" id="toggleReference">Show Reference Image</button>
+
+            <div id="originalImageContainer">
+                <h3>Reference Image</h3>
+                <img id="originalImage" class="original-image" src="" alt="Original Image">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
