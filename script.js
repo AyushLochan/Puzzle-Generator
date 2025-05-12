@@ -160,10 +160,7 @@ function checkSolution() {
     if (solved) {
         puzzleSolved = true;
         clearInterval(timerInterval);
-        successMessage.style.display = 'block';
-        setTimeout(() => {
-            successMessage.style.display = 'none';
-        }, 3000);
+        // Removed the successMessage display
     }
 }
 
