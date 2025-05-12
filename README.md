@@ -7,7 +7,7 @@ A simple web-based puzzle generator built with HTML, CSS, and JavaScript. This t
 * **Interactive Puzzle Creation**: Design puzzles by specifying grid dimensions and content.
 * **Customizable Styles**: Adjust the appearance of puzzles using CSS.
 * **JavaScript Functionality**: Implement logic for puzzle generation and interaction.
-* **No Installation Required**: Run the application directly from the browser.([Hacker News][1])
+* **No Installation Required**: Run the application directly from the browser.
 
 ## Installation
 
