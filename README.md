@@ -34,3 +34,7 @@ To use the Puzzle Generator:
 ## Usage
 
 Upon opening `index.html`, you'll be presented with an interface to create your puzzle. Follow the on-screen instructions to customize your puzzle's grid size, content, and appearance.
+
+## Demo
+
+https://ayushlochan.github.io/Puzzle-Generator/
